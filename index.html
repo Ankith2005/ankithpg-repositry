@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankith PG - Portfolio</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Segoe UI", sans-serif; height: 100vh; overflow: hidden; }
+    a { text-decoration: none; color: inherit; cursor: pointer; }
+
+    /* Navbar */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #663399; padding: 15px 30px;
+    }
+    nav .logo { font-size: 20px; font-weight: bold; color: #4da6ff; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul li a {
+      color: #f5f5f5; font-weight: 500; padding: 5px 10px; border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover { background: #333; }
+
+    /* Sections */
+    section {
+      width: 100%; height: calc(100vh - 60px);
+      display: none;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    section.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+    }
+
+    section h2 {
+      font-size: 2rem; margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+    }
+    section h2::after {
+      content: ""; display: block; width: 60px; height: 3px;
+      background: #EEE8AA; margin: 10px auto 0;
+    }
+
+    /* Horizontal layout for contents */
+    .grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px; border-radius: 10px;
+      text-align: center; transition: transform 0.3s, background 0.3s;
+      min-width: 200px;
+    }
+    .card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.2); }
+    .card i { font-size: 2.5rem; margin-bottom: 15px; }
+    .card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+
+    /* Hero */
+    .hero h1 { font-size: 3rem; margin-bottom: 15px; text-align: center; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; text-align: center; }
+    .hero a {
+      display: inline-block;
+      background: #007bff; color: #fff; padding: 10px 20px; border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .hero a:hover { background: #0056b3; }
+
+    /* Footer */
+    footer {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  background: #663399;  /* same as navbar */
+  position: fixed;       /* always visible */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+    /* Backgrounds */
+    #hero {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #6a11cb);
+    }
+    #contact, #profile, #education, #skills, #strengths, #projects, #achievements {
+      background: #121212;
+      color: #EEE8AA;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Ankith PG</div>
+    <ul>
+      <li><a data-section="hero">Home</a></li>
+      <li><a data-section="contact">Contact</a></li>
+      <li><a data-section="profile">Profile</a></li>
+      <li><a data-section="education">Education</a></li>
+      <li><a data-section="skills">Skills</a></li>
+      <li><a data-section="strengths">Strengths</a></li>
+      <li><a data-section="projects">Projects</a></li>
+      <li><a data-section="achievements">Achievements</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero active" id="hero">
+    <h1>Hi, I'm Ankith PG</h1>
+    <p>Aspiring Computer Science Engineer | Passionate about Software Development & Design</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card"><i class='bx bxs-phone'></i><h3>Phone</h3><p>+91 7975039564</p></div>
+      <div class="card"><i class='bx bxs-envelope'></i><h3>Email</h3><p>pgankith@gmail.com</p></div>
+      <div class="card"><i class='bx bxs-map'></i><h3>Location</h3><p>Puttur, Karnataka</p></div>
+      <div class="card"><i class='bx bxl-linkedin'></i><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/ankith-pg-9a3a5a365" target="_blank">View Profile</a></p></div>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section id="profile">
+    <h2>Profile</h2>
+    <p style="max-width: 800px;">
+      Detail-oriented and highly motivated technology enthusiast with strong foundations
+      in data structures, algorithms, and programming concepts. Skilled in Java, Python,
+      and C/C++ with hands-on experience in database management and web application
+      development. Eager to contribute to innovative projects, quickly adapt to new
+      technologies, and deliver impactful solutions.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <i class='bx bxs-graduation'></i>
+        <h3>Bachelor’s Degree in Computer Science</h3>
+        <p>Vivekananda College of Engineering and Technology (2023–2027)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><i class='bx bx-code' style="color:#3498db;"></i><h3>Java, C, Python</h3></div>
+      <div class="card"><i class='bx bx-data' style="color:#27ae60;"></i><h3>Data Structures & OOP</h3></div>
+      <div class="card"><i class='bx bx-globe' style="color:#e74c3c;"></i><h3>HTML, CSS, JS, Flask</h3></div>
+      <div class="card"><i class='bx bx-server' style="color:#f39c12;"></i><h3>MySQL (CRUD, Optimization)</h3></div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section id="strengths">
+    <h2>Strengths</h2>
+    <div class="grid">
+      <div class="card"><i class='bx bx-analyse' style="color:#9b59b6;"></i><h3>Analytical Thinking</h3></div>
+      <div class="card"><i class='bx bx-group' style="color:#1abc9c;"></i><h3>Teamwork</h3></div>
+      <div class="card"><i class='bx bx-message-detail' style="color:#e67e22;"></i><h3>Communication</h3></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><i class='bx bx-book-content' style="color:#ff6b6b;"></i><h3>Contact Book App</h3><p>Flask, Python, HTML, MySQL</p></div>
+      <div class="card"><i class='bx bx-chat' style="color:#48dbfb;"></i><h3>Chat Application</h3><p>Real-time Flask app</p></div>
+      <div class="card"><i class='bx bx-data' style="color:#10ac84;"></i><h3>Database System</h3><p>Java + MySQL (CRUD)</p></div>
+      <div class="card"><i class='bx bx-shield' style="color:#feca57;"></i><h3>Cybersecurity Tool</h3><p>Password checker & vulnerability scanner</p></div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card"><i class='bx bx-code-alt'></i><h3>100+ Problems Solved</h3><p>LeetCode, HackerRank, Codeforces</p></div>
+      <div class="card"><i class='bx bx-certification'></i><h3>Certifications</h3><p>AWS, Google Cloud, Coursera, NPTEL</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Ankith PG | Portfolio Website
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const links = document.querySelectorAll('nav ul li a, .hero a');
+    const sections = document.querySelectorAll('section');
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.dataset.section;
+        sections.forEach(sec => {
+          if (sec.id === target) sec.classList.add('active');
+          else sec.classList.remove('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
